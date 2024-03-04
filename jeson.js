@@ -99,4 +99,56 @@ function a(){
 }
 
 
+
+const latestpost =async()=>{
+
+    const respons =await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+    const data = await respons.json();
+    console.log(data)
+
+    const latestpost =document.getElementById('latest-post')
+   data.forEach(element => {
+    console.log(element)
+
+
+   const div = document.createElement('div');
+   div.innerHTML=`<div class="card  bg-base-100 shadow-xl ">
+   <figure class="px-10 pt-10">
+       <img src="${element.cover_image}" alt="Shoes"
+           class="rounded-xl" />
+   </figure>
+   <div class="card-body lg:p-[40px]">
+       <div class="flex gap-3">
+           <span><i class="fa-solid fa-calendar-week"></i></span>
+           <p>${element.author.posted_date}</p>
+       </div>
+       <h2 class="text-xl font-bold text-black">${element.title}</h2>
+       <p>${element.description}</p>
+       <div class="flex gap-5 mt-4">
+           <div class="w-12 ">
+               <img class="rounded-full"
+                   src="${element.profile_image}" />
+           </div>
+           <div>
+               <h4>${element.author.name}</h4>
+               <p>${element.author.designation}</p>
+           </div>
+
+       </div>
+   </div>
+    </div>`
+
+latestpost.appendChild(div)
+
+   });
+}
+
+
+
+
+
+
+
+
+latestpost()
 showdata()

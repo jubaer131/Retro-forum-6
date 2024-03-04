@@ -16,24 +16,25 @@
 <body>
     <header class="container m-auto">
         <!-- nav bar start-->
-        <div>
+        <div class="lg:mt-8">
             <div class="navbar bg-base-100">
                 <div class="flex-1">
                     <img src="images/logo.png" alt="">
                 </div>
                 <div class="flex-none lg:space-x-8">
-                    <button class="btn btn-active btn-ghost rounded-full">
-                        <span><i class="fa-solid fa-house"></i></span>
-                    </button>
-                    <button class="btn btn-active btn-ghost rounded-full ">
-                        <span><i class="fa-solid fa-pen"></i></span>
-                    </button>
-                    <button class="btn btn-active btn-ghost rounded-full">
-                        <span><i class="fa-solid fa-user-plus"></i></span>
-                    </button>
-                    <button class="btn btn-active btn-ghost rounded-full">
-                        <i class="fa-solid fa-flag"></i>
-                    </button>
+
+                    <div class="tooltip  tooltip-top" data-tip="hello">
+                        <button class="btn rounded-full"><i class="fa-solid fa-house"></i></i></button>
+                    </div>
+                    <div class="tooltip  tooltip-top" data-tip="hello">
+                        <button class="btn rounded-full"><i class="fa-solid fa-pen"></i></button>
+                    </div>
+                    <div class="tooltip  tooltip-top" data-tip="hello">
+                        <button class="btn rounded-full"><i class="fa-solid fa-user-plus"></i></button>
+                    </div>
+                    <div class="tooltip  tooltip-top" data-tip="hello">
+                        <button class="btn rounded-full"><i class="fa-solid fa-flag"></i></button>
+                    </div>
                     <div>
                         <button
                             class="btn bg-indigo-500 text-white text-[16px] font-semibold rounded-3xl lg:w-[130px]">Sign
@@ -218,9 +219,9 @@
                 best answers <br> from
                 experts, Knowledge sharing Discuss portal.
             </p>
-            <div class="grid lg:grid-cols-3 gap-4">
+            <div id="latest-post" class="grid lg:grid-cols-3 gap-4">
 
-                <div class="card  bg-base-100 shadow-xl ">
+                <!-- <div class="card  bg-base-100 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
                             class="rounded-xl" />
@@ -245,59 +246,9 @@
 
                         </div>
                     </div>
-                </div>
-                <div class="card  bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                            class="rounded-xl" />
-                    </figure>
-                    <div class="card-body lg:p-[40px]">
-                        <div class="flex gap-3">
-                            <span><i class="fa-solid fa-calendar-week"></i></span>
-                            <p>29 january 2044</p>
-                        </div>
-                        <h2 class="text-xl font-bold text-black">If a dog chews shoes whose shoes does he choose?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose Lorem ipsum dolor sit, amet consectetur
-                            adipisicing elit. Iusto ea aliquid magni ab, consequuntur, dolorum dignissimos explicab?</p>
-                        <div class="flex gap-5 mt-4">
-                            <div class="w-12 ">
-                                <img class="rounded-full"
-                                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
-                            <div>
-                                <h4>jubaer ahmed</h4>
-                                <p>unknown</p>
-                            </div>
+                </div> -->
 
-                        </div>
-                    </div>
-                </div>
-                <div class="card  bg-base-100 shadow-xl ">
-                    <figure class="px-10 pt-10">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                            class="rounded-xl" />
-                    </figure>
-                    <div class="card-body lg:p-[40px]">
-                        <div class="flex gap-3">
-                            <span><i class="fa-solid fa-calendar-week"></i></span>
-                            <p>29 january 2044</p>
-                        </div>
-                        <h2 class="text-xl font-bold text-black">If a dog chews shoes whose shoes does he choose?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose Lorem ipsum dolor sit, amet consectetur
-                            adipisicing elit. Iusto ea aliquid magni ab, consequuntur, dolorum dignissimos explicab?</p>
-                        <div class="flex gap-5 mt-4">
-                            <div class="w-12 ">
-                                <img class="rounded-full"
-                                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
-                            <div>
-                                <h4>jubaer ahmed</h4>
-                                <p>unknown</p>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!--Latest post section sec start -->
