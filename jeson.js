@@ -25,17 +25,17 @@ div.innerHTML=`<div class="lg:hero  bg-base-200 lg:p-10 lg:w-11/12 rounded-3xl m
         </div>
     </div>
     <div>
-        <div class="flex gap-14">
-            <p>#${items.category}</p>
-            <p>Author:${items.author.name}</p>
+        <div class="flex gap-14 lg:mb-4">
+            <p class="text-xl font-medium text-[#12132dcc]">#${items.category}</p>
+            <p class="text-xl font-medium text-[#12132dcc]">Author : ${items.author.name}</p>
         </div>
         <div>
-            <h1 class=" text-2xl lg:text-5xl font-bold">${items.title}
+            <h1 class=" text-2xl lg:text-4xl font-bold">${items.title}
             </h1>
-            <p class="lg:py-6">${items.description}
+            <p class="text-xl font-medium text-[#12132dcc] lg:py-6">${items.description}
             </p>
         </div>
-        <hr class="border border-dotted border-red-400 my-6">
+        <hr class="border border-dotted border-[#12132d40] my-6">
         <div class="flex justify-between items-center ">
             <div class="flex lg:justify-start items-center gap-8 lg:gap-x-20 max-sm:px-2">
                 <div class="flex justify-between items-center lg:gap-x-10">
@@ -63,7 +63,6 @@ div.innerHTML=`<div class="lg:hero  bg-base-200 lg:p-10 lg:w-11/12 rounded-3xl m
 </div>
 </div>`
 
-
 showall.appendChild(div)
 
 const isActive =items.isActive;
@@ -88,9 +87,9 @@ if(isActive){
 const divcontainer =document.getElementById('div-container');
 const div =document.createElement('div');
 div.innerHTML=` <div
-class="flex justify-between items-center bg-base-100 shadow-xl w-[330px]  lg:w-[460px] h-[100px] p-6 rounded-3xl my-5">
+class="flex justify-between items-center bg-base-100 shadow-xl w-[330px]  lg:w-[460px] lg:h-[100px] p-6 rounded-3xl my-5">
 <div>
-    <h2 class="text-2xl font-medium text-black">${id}</h2>
+    <h2 class="text-xl  lg:text-xl font-medium text-black">${id}</h2>
 </div>
 
 <div class="flex justify-between items-center lg:gap-x-10">
