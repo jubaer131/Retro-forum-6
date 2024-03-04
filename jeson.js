@@ -9,13 +9,16 @@ const showall =document.getElementById('show-data');
 data.posts.forEach(items => {
 
 
-// console.log(items)
+
+
+console.log(items.isActive);
+
 
 const div = document.createElement('div');
 div.innerHTML=`<div class="lg:hero  bg-base-200 lg:p-10 lg:w-11/12 rounded-3xl mb-7">
 <div class="hero-content flex-col lg:flex-row items-start ">
     <div class="avatar indicator">
-        <span class="indicator-item badge badge-secondary"></span>
+        <span id="active" class="indicator-item badge bg-red-500"></span>
         <div class="w-20 h-20 rounded-lg">
             <img alt="Tailwind CSS examples"
                 src="${items.image}" />
@@ -50,7 +53,7 @@ div.innerHTML=`<div class="lg:hero  bg-base-200 lg:p-10 lg:w-11/12 rounded-3xl m
 
             </div>
             <div>
-                <button onclick="markasread('${items.author.name}')" class="btn  bg-green-400 rounded-full">
+                <button onclick="markasread('${items.title}','${items.view_count}')" class="btn  bg-green-400 rounded-full">
                     <i class="fa-solid fa-envelope-open" style="color: #f0eef6;"></i>
                 </button>
             </div>
@@ -60,17 +63,26 @@ div.innerHTML=`<div class="lg:hero  bg-base-200 lg:p-10 lg:w-11/12 rounded-3xl m
 </div>
 </div>`
 
-// console.log(items.id)
+
 showall.appendChild(div)
 
+const isActive =items.isActive;
+const activeelement = document.getElementById('active');
+activeelement.classList.remove("bg-red-500");
+// activeelement.classList.add(isActive?"bg-green-500" : "bg-red-500");
+if(isActive){
+    activeelement.classList.add('bg-green-500')
+}else{
+    activeelement.classList.add('bg-red-500')
+}
  
 });
 }
 
 
- function markasread(id){
+ function markasread(id,title){
         
-    console.log(id)
+    console.log(id,title)
 
 
 const divcontainer =document.getElementById('div-container');
@@ -83,7 +95,7 @@ class="flex justify-between items-center bg-base-100 shadow-xl w-[330px]  lg:w-[
 
 <div class="flex justify-between items-center lg:gap-x-10">
     <span><i class="fa-regular fa-eye"></i></span>
-    <span id="show">105</span>
+    <span id="show">${title}</span>
 </div>
 </div>`
 divcontainer.appendChild(div)
@@ -104,11 +116,11 @@ const latestpost =async()=>{
 
     const respons =await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
     const data = await respons.json();
-    console.log(data)
+    // console.log(data)
 
     const latestpost =document.getElementById('latest-post')
    data.forEach(element => {
-    console.log(element)
+    // console.log(element)
 
 
    const div = document.createElement('div');
